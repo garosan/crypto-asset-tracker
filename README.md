@@ -1,54 +1,80 @@
-# React + TypeScript + Vite
+# 📈💸 Crypto Asset Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Responsive frontend web app to track the performance of 5 crypto assets over the past **Week**, **Month**, and **Year**, using CoinGecko's public API and local caching.
 
-Currently, two official plugins are available:
+## 💻 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I used the following stack:
 
-## Expanding the ESLint configuration
+- Vite
+- React
+- TypeScript
+- Redux-toolkit
+- Tailwind CSS
+- Recharts for charting
+- Vitest + react-testing-library
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Features
+
+- ✅ Select from major crypto assets (BTC, ETH, ARB, AVAX, OP)
+- ✅ View performance charts for last 7, 30, or 365 days
+- ✅ Dynamically scaled Y-axis for clean visualization
+- ✅ Caches fetched data in `localStorage` (expires after 1 hour)
+- ✅ Clean UI with Tailwind & component-based architecture
+- ✅ Written in TypeScript with clear logic separation
+- ✅ Includes one UI test and one logic test (Vitest + RTL)
+- ✅ Wallet connection via MetaMask, Rainbow, etc. (testnets only)
+
+---
+
+## 📦 Setup
+
+```bash
+git clone git@github.com:garosan/crypto-asset-tracker.git
+cd crypto-asset-tracker
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Copy environment variables (in this case, only the CoinGecko public API URL which is included in the example file)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+cp .env.example .env
 ```
+
+---
+
+## 🏃 Run the app
+
+```bash
+npm run dev
+```
+
+Then open: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🧪 Running Tests
+
+Simply run:
+
+```bash
+npx vitest
+```
+
+---
+
+## 📷 Screenshots
+
+Desktop view:
+<br>
+<img src="screenshots/desktop-01.png" alt="Chart View" width="700" />
+<br>
+Mobile view:
+<br>
+<img src="screenshots/mobile-01.png" alt="Wallet Connect" height="600" />
+<br>
+Tests:
+<br>
+<img src="screenshots/tests.png" alt="Wallet Connect" width="500" />
