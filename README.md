@@ -18,14 +18,12 @@ I used the following stack:
 
 ## 🚀 Features
 
-- ✅ Select from major crypto assets (BTC, ETH, ARB, AVAX, OP)
+- ✅ Select from major crypto assets (BTC, ETH, AVAX, AAVE)
 - ✅ View performance charts for last 7, 30, or 365 days
 - ✅ Dynamically scaled Y-axis for clean visualization
 - ✅ Caches fetched data in `localStorage` (expires after 1 hour)
-- ✅ Clean UI with Tailwind & component-based architecture
-- ✅ Written in TypeScript with clear logic separation
 - ✅ Includes one UI test and one logic test (Vitest + RTL)
-- ✅ Wallet connection via MetaMask, Rainbow, etc. (testnets only)
+- 🔜 Wallet connection integration coming next
 
 ---
 
